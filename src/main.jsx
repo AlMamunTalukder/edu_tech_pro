@@ -11,6 +11,8 @@ import Events from "./components/Categories/Events";
 import Gallery from "./components/Gallery/Gallery";
 
 import AllEventDetails from "./components/Categories/AllEventDetails";
+import Login from "./components/Login/Login";
+import Registration from "./components/Registration/Registration";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <AllEventDetails></AllEventDetails>,
         loader: () => fetch("/eduevents.json"),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Registration></Registration>,
       },
     ],
   },

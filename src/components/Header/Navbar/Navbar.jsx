@@ -60,7 +60,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">EduTechPro</a>
+        <NavLink to="/">
+          <a className="btn btn-ghost normal-case text-xl">EduTechPro</a>
+        </NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -115,7 +117,10 @@ const Navbar = () => {
             Log Out
           </button>
         )} */}
-        <a className="btn">Log In</a>
+
+        <NavLink to="/login">
+          <a className="btn">Log In</a>
+        </NavLink>
       </div>
     </div>
   );
