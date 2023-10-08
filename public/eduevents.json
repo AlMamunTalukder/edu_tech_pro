@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Workshop Webinar Wednesdays",
+    "image": "https://i.ibb.co/zxfgTSS/webinar1.jpg",
+    "price": 29.99,
+    "short_description": "Join our weekly Workshop Webinar Wednesdays to embark on a continuous journey of skill development. These engaging sessions are designed to help you acquire valuable knowledge and expertise across various domains. Whether you're a professional seeking to enhance your skillset or a student eager to explore new areas, these workshops and webinars cater to diverse learning needs. Our expert instructors provide practical insights, tips, and hands-on experience to empower you with actionable skills."
+  },
+  {
+    "id": 2,
+    "name": "Career Fair Connection",
+    "image": "https://i.ibb.co/RNN7JKt/career-fair.jpg",
+    "price": 75.0,
+    "short_description": "Are you ready to take the next step in your career? Join the Career Fair Connection, where opportunities await. Our virtual career fairs connect job seekers with a wide range of employers from various industries. Whether you're a recent graduate looking for your first job, a seasoned professional seeking new challenges, or anyone in between, this event is for you.\n\nParticipation is free, so you can explore job openings, interact with recruiters, and attend informative sessions without any cost. Get ready to make meaningful connections."
+  },
+  {
+    "id": 3,
+    "name": "Educational Conference Series",
+    "image": "https://i.ibb.co/MZqx2J4/educational-conference.jpg",
+    "price": 79.99,
+    "short_description": "Welcome to EduConclave, a series of educational conferences that bring together experts, educators, and learners to dive deep into the latest trends and insights in the world of education. Our conferences cover a wide range of topics, from innovative teaching methods to the future of online learning.\n\nJoin us to gain valuable knowledge, network with thought leaders, and exchange ideas with fellow educators. Each conference session is meticulously curated to provide you with actionable takeaways that you can implement."
+  },
+  {
+    "id": 4,
+    "name": "Training Pro Track",
+    "image": "https://i.ibb.co/jgqL19Q/isometric-running-mobile-app-infographic-52683-14360.jpg",
+    "price": 49.99,
+    "short_description": "Elevate your skills with our Training Pro Track, a comprehensive program designed to help you excel in your chosen field. Whether you're looking to upskill for career advancement or acquire new skills for personal growth, our training programs offer you the expertise you need.\n\nOur instructors are industry veterans who provide hands-on training, real-world scenarios, and practical insights. With a focus on affordability, each training program is priced at just $49.99, making it accessible to all. "
+  },
+  {
+    "id": 5,
+    "name": "Skill Builder Symposium",
+    "image": "https://i.ibb.co/4M5KXk7/symposium.jpg",
+    "price": 39.99,
+    "short_description": "Join us at the SkillBuilder Symposium, where you'll have the opportunity to learn from industry experts and enhance your skillset. Our symposium offers a diverse range of workshops, seminars, and interactive sessions that cater to various skill development needs.\n\nPriced affordably at $39.99 per session, the SkillBuilder Symposium is your gateway to acquiring in-demand skills that can boost your career prospects. Whether you're looking to sharpen your technical skills."
+  },
+  {
+    "id": 6,
+    "name": "Learn and Earn Expo",
+    "image": "https://i.ibb.co/tp2mx1Z/learn-n-earn.webp",
+    "price": 90.0,
+    "short_description": "The Learn and Earn Expo is your one-stop destination for exploring educational and career opportunities. Whether you're a student planning your academic journey or a professional seeking new career paths, this interactive expo has something for everyone.\n\nParticipation is free, so you can connect with educational institutions, employers, and career advisors without any cost. Attend informative sessions, explore educational programs, and discover job openings—all in one place. "
+  }
+]
