@@ -14,6 +14,7 @@ import AllEventDetails from "./components/Categories/AllEventDetails";
 import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
 import AuthProvider from "./components/Hook/AuthProvider";
+import PrivateHook from "./components/Hook/PrivateHook";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <AllEventDetails></AllEventDetails>,
+        element: (
+          <PrivateHook>
+            <AllEventDetails></AllEventDetails>
+          </PrivateHook>
+        ),
         loader: () => fetch("/eduevents.json"),
       },
       {

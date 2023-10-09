@@ -83,7 +83,7 @@ const Registration = () => {
                 </label>
                 <input
                   onChange={(e) => setPass(e.target.value)}
-                  type="text"
+                  type="password"
                   placeholder="password"
                   className="input input-bordered"
                   name="password"

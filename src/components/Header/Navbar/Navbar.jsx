@@ -117,16 +117,24 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <p>{user?.email}</p>
-        {user && (
-          <button onClick={handleLogOut} className="btn btn-primary">
-            Log Out
-          </button>
-        )}
+        {user ? (
+          <div className="flex items-center">
+            <img
+              src={user.imageUrl}
+              alt={`${user.name}'s profile`}
+              className="w-10 h-10 rounded-full mr-2"
+            />
+            <p className="mr-2">{user.name}</p>
 
-        <NavLink to="/login">
-          <a className="btn">Log In</a>
-        </NavLink>
+            <button onClick={handleLogOut} className="btn btn-primary ml-2">
+              Log Out
+            </button>
+          </div>
+        ) : (
+          <NavLink to="/login">
+            <a className="btn">Log In</a>
+          </NavLink>
+        )}
       </div>
     </div>
   );
