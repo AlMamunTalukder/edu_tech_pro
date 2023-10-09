@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
-import { Link, Navigate, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Hook/AuthProvider";
+import swal from "sweetalert";
 
 const Login = () => {
   const { googleSignIN, signIn } = useContext(AuthContext);
@@ -11,21 +12,27 @@ const Login = () => {
 
   const location = useLocation();
   console.log(location);
+  const navigate = useNavigate();
+
+  // const from = location.state?.from?.pathname || "/";
 
   const handleGoogleLogIn = () => {
     googleSignIN().then((response) => {
-      console.log(response);
-      Navigate(location?.state ? location?.state : "/");
+      console.log(response.user);
+      swal("Welcome", "Log in Successful", "success");
+      navigate("/");
     });
   };
 
   const handleLogIn = () => {
-    if ((email, setEmail)) {
+    if (email && password) {
       signIn(email, password)
         .then((result) => {
           console.log(result.user);
-          Navigate(location?.state ? location?.state : "/");
+          swal("Welcome", "Log in Successful", "success");
+          navigate("/");
         })
+
         .catch((error) => {
           setError(error.message);
         });
@@ -60,7 +67,8 @@ const Login = () => {
                   type="text"
                   placeholder="email"
                   className="input input-bordered"
-                  onClick={(e) => setEmail(e.target.value)}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="form-control">
@@ -71,7 +79,8 @@ const Login = () => {
                   type="password"
                   placeholder="password"
                   className="input input-bordered"
-                  onClick={(e) => setPass(e.target.value)}
+                  value={password}
+                  onChange={(e) => setPass(e.target.value)}
                 />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">

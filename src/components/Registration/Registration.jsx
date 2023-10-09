@@ -58,7 +58,7 @@ const Registration = () => {
                 </label>
                 <input
                   onChange={(e) => setEmail(e.target.value)}
-                  type="text"
+                  type="email"
                   placeholder="email"
                   className="input input-bordered"
                   name="email"

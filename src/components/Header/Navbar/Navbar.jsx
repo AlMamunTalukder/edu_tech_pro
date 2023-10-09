@@ -4,7 +4,7 @@ import { AuthContext } from "../../Hook/AuthProvider";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+
   const handleLogOut = () => {
     logOut().then();
   };
@@ -119,13 +119,17 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex items-center">
-            <img
-              src={user.imageUrl}
-              alt={`${user.name}'s profile`}
-              className="w-10 h-10 rounded-full mr-2"
-            />
-            <p className="mr-2">{user.name}</p>
-
+            {user.photoURL ? (
+              <img
+                src={user.photoURL}
+                alt={`${user.displayName}'s profile`}
+                className="w-10 h-10 rounded-full mr-2"
+              />
+            ) : (
+              <div className="w-10 h-10 rounded-full bg-gray-500 mr-2"></div>
+            )}
+            <p className="mr-2">{user.displayName}</p>
+            <p>{user.email}</p>
             <button onClick={handleLogOut} className="btn btn-primary ml-2">
               Log Out
             </button>

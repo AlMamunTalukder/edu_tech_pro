@@ -10,6 +10,7 @@ import {
   onAuthStateChanged,
   GoogleAuthProvider,
   signInWithPopup,
+  updateProfile,
 } from "firebase/auth";
 
 export const AuthContext = createContext(null);
@@ -25,8 +26,21 @@ const AuthProvider = ({ children }) => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  const signUp = (email, password) => {
-    return createUserWithEmailAndPassword(auth, email, password);
+  const signUp = (email, password, name, img) => {
+    return createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        return updateProfile(user, { displayName: name, photoURL: img })
+          .then(() => {
+            setUser(auth.currentUser);
+          })
+          .catch((error) => {
+            console.error("Error updating user profile:", error);
+          });
+      })
+      .catch((error) => {
+        console.error("Error signing up:", error);
+      });
   };
 
   const signIn = (email, password) => {
