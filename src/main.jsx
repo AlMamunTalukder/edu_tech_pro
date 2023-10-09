@@ -13,6 +13,7 @@ import Gallery from "./components/Gallery/Gallery";
 import AllEventDetails from "./components/Categories/AllEventDetails";
 import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
+import AuthProvider from "./components/Hook/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
